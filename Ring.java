@@ -3,15 +3,14 @@ package modele;
 import vue.DrawableRing;
 
 
-public class Ring extends Shape{
+public class Ring extends Cercle{
 public int Rmin;
-private int Rmax;
-
+public int Rmax;
 
 public Ring(Point p , int Rmax, int Rmin)
 {
 	
-super (p);
+super (p,Rmax);
 this.Rmin=Rmin;
 this.Rmax=Rmax;
 ds=new DrawableRing(this);
@@ -40,3 +39,6 @@ public boolean contains(Point p) {
 	return false;
 }
 }
+
+
+
