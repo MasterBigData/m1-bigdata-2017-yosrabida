@@ -2,10 +2,10 @@ package vue;
 import java.awt.Graphics;
 
 import modele.Ring;
-import modele.Shape;
-public class DrawableRing extends DrawableShape {
-	public DrawableRing(Shape R) {
-		super(R);
+import modele.Cercle;
+public class DrawableRing extends DrawableCercle {
+	public DrawableRing(Cercle s) {
+		super(s);
 	}
 
 
@@ -17,4 +17,3 @@ public class DrawableRing extends DrawableShape {
 
 	}
 	}
-
