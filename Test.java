@@ -30,6 +30,11 @@ public class Test {
         w.shapes.add(R2);
 		MyDisplay d=new MyDisplay(w);
 		
+			MyDisplay d=new MyDisplay(w);
+		Controller mc=new Controller(md);
+			   Repaint();
+
+		
 		w.addObserver(d);
 		frame.add(d);
 		frame.setVisible(true);
