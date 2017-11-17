@@ -12,6 +12,9 @@ public abstract class Controller implements MouseMotionListener {
 
 	private MyDisplay md;
 
+	public Controller() {
+		this.md=null;
+	}
 	public Controller(MyDisplay md) {
 		this.md=md;
 		 md.addMouseMotionListener(this);
@@ -25,17 +28,19 @@ public abstract class Controller implements MouseMotionListener {
 
 	public void mouseMoved(MouseEvent e) {
 		
-		md.getX().get(0)=e.getX();
-		md.getY().get(0)=e.getY();
-
+		this.md.w.shapes.get(0).getCenter().setX((e.getX()));
+		this.md.w.shapes.get(0).getCenter().setY((e.getY()));
+	this.md.repaint();
 	}
-	
-	
+
+
+
+
+
 	public void mouseDragged(MouseEvent e) {
 	}
 	}
 	
 	
 	
-
 
