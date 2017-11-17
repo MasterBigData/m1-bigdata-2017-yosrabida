@@ -31,8 +31,8 @@ public class Test {
 		MyDisplay d=new MyDisplay(w);
 		
 			MyDisplay d=new MyDisplay(w);
-		Controller mc=new Controller(md);
-			   Repaint();
+		Controller mc=new Controller(d);
+			  
 
 		
 		w.addObserver(d);
