@@ -1,0 +1,58 @@
+import java.util.Iterator;
+
+public class Panel2 implements Iterable<Integer> {
+    private  int min;
+	private  int max;
+
+    public Panel2(int min, int max) {
+        this.min = min;
+        this.max = max;
+    }
+   
+
+  public Iterator<Integer> iterator() {
+        return new AutreClasse(min, max);
+    }
+
+    // Inner class example
+    private class AutreClasse implements
+                    Iterator<Integer> {
+    	int valdeb;
+		int valfin;
+		AutreClasse(int valdeb , int valfin){
+			this.valdeb=valdeb;
+			this.valfin=valfin;
+		}
+
+        public boolean hasNext() {
+        	if(this.valdeb>this.valfin) 
+			{return false;}
+	else {
+		return true;}
+	}
+
+        public Integer next() {
+        	if(this.hasNext())
+			{
+        return valdeb++;}
+			else
+			{  throw new IllegalStateException("NO NEXT");
+		}
+		
+        }
+
+    }
+
+
+    public static void main(String[] args) {
+
+
+
+        for(int i:Panel2(1,5)) {
+            System.out.println(i);
+        }
+   
+}
+
+
+	
