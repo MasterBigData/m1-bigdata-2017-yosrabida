@@ -1,0 +1,50 @@
+import java.util.Iterator;
+
+public class Panel1 {
+
+	static Iterator<Integer> Panel1(int min,int max){
+		
+		return new AutreClasse(min,max);
+	}
+	
+	
+	static class AutreClasse implements Iterator<Integer>{
+		
+		int valdeb;
+		int valfin;
+		AutreClasse(int valdeb , int valfin){
+			this.valdeb=valdeb;
+			this.valfin=valfin;
+		}
+
+		
+		@Override
+		public boolean hasNext() {
+			if(this.valdeb>this.valfin) 
+				{return false;}
+		else {
+			return true;}
+		}
+
+		@Override
+		public Integer next() 
+		{
+			if(this.hasNext())
+			{
+        return valdeb++;}
+			else
+			{  throw new IllegalStateException("NO NEXT");
+		}
+		
+		
+		
+		}
+	}
+public static void main(String[] args ) {
+		Iterator<Integer> it=Panel1(1,5);
+		for(;it.hasNext();)
+			System.out.println(it.next());
+	}
+	
+}
+
