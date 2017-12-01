@@ -1,0 +1,32 @@
+import java.util.Iterator;
+
+
+public class PanelAnonym {
+
+	static Iterator<Integer> Panel1(int min,int max){
+	
+		return new Iterator<Integer>() {
+
+			int i=min ;
+			@Override
+			public boolean hasNext() {
+				return (this.i<=max) ;
+				
+			}
+
+			@Override
+			public Integer next() {
+				if(this.hasNext())
+				{
+	        return i++;}
+				else
+				{  throw new IllegalStateException("NO NEXT");}
+		}
+			
+	};}
+	public static void main(String[] args ) {
+		Iterator<Integer> it=Panel1(1,5);
+		for(;it.hasNext();)
+			System.out.println(it.next());
+	}	
+}
