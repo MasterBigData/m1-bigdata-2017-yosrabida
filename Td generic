@@ -1,0 +1,69 @@
+
+public class TdGeneric {
+
+public static int  MyMax(int...nb)	{
+	int[] x= new int[nb.length];
+	x[0]=0;
+	int max = 0;
+	for(int i=0; i<x.length-1 ;i++)
+	    {if (x[i]>x[i+1]) 
+	    	{max=x[i];}
+
+	    }
+	
+	return max;
+
+}
+public static void main(String[] args ) {
+System.out.println(MyMax(42,1664));
+System.out.println(MyMax(2014,86,13)); 
+}
+
+//Question2
+//public static Object[]  MyMax(Object...)	{
+//Object[] x= new Object[nb.length];
+
+}
+
+//exercice2 
+public class Exercice2 {
+
+
+private static void print(List<Object> list) {
+for(Object o:list)
+System.out.println(o);
+}
+public static List<Integer> longueur (List<Object> list implements CharSequence)  {
+	for(Object o:list) {
+	
+	return length(o);
+	}
+	
+}
+public static void main(String[] args) {
+List<Object> list=Arrays.asList("foo", "toto");
+print(list);
+}
+
+}
+
+
+//exercice 3
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Exercice3 {
+	public static <T> List listLength(List<? super T> list) {
+		ArrayList<?> length= new ArrayList<List>(); 	
+		for(int i=0;i<list.size();i++) {
+		CharSequence seq=(CharSequence)list.get(i);
+		length.add(seq.length(), null);
+		}
+		return length;
+		}
+		public static void main(String[] args) {
+		List l=Arrays.asList("colonel", "reyel");
+		System.out.println(listLength(l));
+		}}
+
